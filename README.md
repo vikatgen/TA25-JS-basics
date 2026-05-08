@@ -191,12 +191,13 @@ export default defineConfig({
 4. Lisa skriptid `package.json`
 
 Lisage `package.json` faili scripts sektsiooni käsud koodi kontrollimiseks ja parandamiseks:
-```
+``` json
 "scripts": {
-  "dev": "vite",
-  "build": "npx vite build",
-  "preview": "npx vite preview",
-  "lint": "eslint . --ext .js,.jsx --fix"
+    "dev": "vite",
+    "build": "npx vite build",
+    "preview": "npx vite preview",
+    "lint": "eslint . ",
+    "lint:fix": "eslint . --fix"
 }
 ```
 
