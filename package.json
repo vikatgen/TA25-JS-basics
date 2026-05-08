@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "npx vite",
     "build": "npx vite build",
-    "preview": "npx vite preview"
+    "preview": "npx vite preview",
+    "lint": "eslint . --ext .js,.jsx --fix"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,11 @@
   "homepage": "https://github.com/vikatgen/TA25-nasa#readme",
   "description": "",
   "devDependencies": {
-    "vite": "^8.0.11"
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.3.0",
+    "globals": "^17.6.0",
+    "vite": "^8.0.11",
+    "vite-plugin-eslint": "^1.8.1"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.4",
