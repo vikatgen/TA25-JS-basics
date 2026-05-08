@@ -181,10 +181,14 @@ npm install -D vite-plugin-eslint
 Seejärel lisage see `vite.config.js` faili:
 ``` javascript
 import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
 import eslint from 'vite-plugin-eslint'
 
 export default defineConfig({
-  plugins: [eslint()],
+    plugins: [
+        tailwindcss(),
+        eslint()
+    ],
 })
 ```
 
