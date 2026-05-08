@@ -272,6 +272,8 @@ Miks kasutada **Prettieri** koos **ESLintiga**? Need on erinevad tööriistad, m
 - **Kiirem kirjutamine:** Sa ei pea mõtlema vormindusele — lihtsalt salvesta fail ja Prettier teeb kõik automaatselt korda.
 - **Parem loetavus:** Korralikult vormindatud kood on lihtsam lugeda ja mõista, eriti teiste kirjutatud koodis.
 
+---
+
 ### Prettier'i lisamine projektile
 
 #### 1. Paigalda Prettier
@@ -361,8 +363,6 @@ export default [
 ```
 
 > **NB!** `eslint-config-prettier` peab olema seadistuste massiivi viimane element. Vastasel juhul ei suuda ta ESLinti vormindusreegleid üle kirjutada.
-
----
 
 ### VS Code seadistus (automaatne vormindamine)
 
