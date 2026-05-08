@@ -1,6 +1,4 @@
-import { getSecretKey } from "./utils.js";
-
-const API_KEY = await getSecretKey();
+const API_KEY = import.meta.env.VITE_NASA_API_KEY;
 const params = {
     date: ''
 };
@@ -29,19 +27,19 @@ const renderData = (data) => {
 
     if (data && data.media_type === "video") {
         nasaImageSection.innerHTML = `
-            <video width="600px" controls autoplay>
+            <video controls autoplay class="min-w-full aspect-video">
                 <source src="${data.url}" />
             </video>
-            <figcaption>${data.copyright ?? ""}</figcaption>
-            <h1>${data.title}</h1>
-            <p>${data.explanation}</p>
+            <figcaption class="text-xs text-gray-600 mb-4">${data.copyright ?? ""}</figcaption>
+           <h4 class="text-xl mb-2">${data.title}</h4> 
+            <p class="text-sm text-gray-100 leading-normal text-white/50">${data.explanation}</p>
         `
     } else if (data && data.media_type === "image") {
         nasaImageSection.innerHTML = `
-            <img width="600px" src="${data.url}" />
-            <figcaption>${data.copyright ?? ""}</figcaption>
-            <h1>${data.title}</h1> 
-            <p>${data.explanation}</p>
+            <img class="min-w-full" src="${data.url}" />
+            <figcaption class="text-xs text-gray-600 mb-4">${data.copyright ?? ""}</figcaption>
+            <h4 class="text-xl mb-2">${data.title}</h4> 
+            <p class="text-sm text-gray-100 leading-normal text-white/50">${data.explanation}</p>
         `
     } else {
         nasaImageSection.innerHTML = `

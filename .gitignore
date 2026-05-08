@@ -1,2 +1,5 @@
 *.txt
 .idea
+/dist
+.env
+/node_modules

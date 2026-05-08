@@ -1,0 +1,30 @@
+{
+  "name": "ta25-nasa",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "npx vite",
+    "build": "npx vite build",
+    "preview": "npx vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikatgen/TA25-nasa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vikatgen/TA25-nasa/issues"
+  },
+  "homepage": "https://github.com/vikatgen/TA25-nasa#readme",
+  "description": "",
+  "devDependencies": {
+    "vite": "^8.0.11"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.2.4",
+    "tailwindcss": "^4.2.4"
+  }
+}
