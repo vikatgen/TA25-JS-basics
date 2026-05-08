@@ -1,3 +1,11 @@
+> **Enne alustamist palun tee järgmised sammud ära**
+> 1. Klooni see [repo](https://github.com/vikatgen/TA25-nasa/tree/master)
+> 2. Loo uus branch/haru nimega `feature/code-toolbox`
+> 3. Kontrolli, et sul oleks vähemalt NodeJS versioon 22 käsuga `node -v`
+>    1. Kui NodeJS on puudu üldse, kasutame NVM tööriista, et seda installeerida [NVM](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04#option-3-installing-node-using-the-node-version-manager)
+> 4. Alusta järgnevate sammude täitmist, et luua moderne arenduskeskkond.
+
+
 # Moderne veebirakenduste arendmine
 
 > Võtame kasutusele ViteJS komplekteerija ning loome NodeJS arenduskeskkonna.
