@@ -89,6 +89,22 @@ kus serveeritakse meile jälle mitte-kokkupakitud koodi.
 > - kui keegi kloonib meie repo, siis käsuga `npm install` luuakse talle projekt koos meie määratud moodulitega.
 > - `npm install` kasutab `package.json` faili, et aru saada meie projektist ning installeerida vajalikud moodulid, mis on ära kirjeldatud `devDependencies` ning `dependecies` sektsioonis.
 
+`package-lock.json` on Node.js projektides automaatselt genereeritav fail, mis fikseerib täpsed versioonid kõigist projekti sõltuvustest (packages) ja nende alam-sõltuvustest. See luuakse `npm install` käsu käivitamisel, kui `node_modules` kaust või `package.json` fail muutub.
+
+**Milleks `package-lock.json` faili vaja on?**
+- **Järjepidevus:** Tagab, et kõik arendajad, CI/CD süsteemid ja tootmisserverid (production) installivad täpselt sama versiooni raamatukogudest.
+- **Vigade vältimine:** Hoiab ära "minu masinas töötab" probleemi, kus uuemad alammoodulid võivad koodi katki teha.
+- **Täpsus:** Kui package.json lubab versioonivahemikke (nt ^1.2.0), siis package-lock.json fikseerib konkreetse versiooni (nt 1.2.3).
+- **Kiirus:** NPM-il on kiirem paigaldada sõltuvusi, sest versioone ei pea uuesti lahendama.
+
+**Miks see peab Giti panema (commitima)?**
+- **Reproduceeritavad ehitused:** See on ainus viis tagada, et kui keegi teine (või automaatsüsteem) projekti alla laeb ja npm install teeb, saab ta täpselt sama keskkonna, mis sina.
+- **Turvalisus:** Fikseerib sõltuvuste terviklikkuse (hashes), mis aitab vältida pahatahtlike pakettide salajast uuendamist.
+- **Meeskonnatöö:** Ilma selleta võivad erinevad arendajad saada erinevad node_modules puud, mis tekitab konflikte.
+- **Audit:** See annab ülevaate, millised sõltuvused ja alam-sõltuvused muutusid.
+
+**Kokkuvõtteks:** package-lock.json on hädavajalik stabiilsuse tagamiseks ja see tuleb alati Giti lisada.
+
 ## Moodulite (pluginate) lisamine meie koodibaasi
 [Tailwind dokumentatsioon](https://tailwindcss.com/docs/installation/using-vite)
 > Kuna ViteJS on meil juba olemas, siis selle käsu jätame vahele.
